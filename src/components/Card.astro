@@ -1,0 +1,27 @@
+---
+const { linkName } = Astro.props;
+const { href, disabled = false } = Astro.props;
+---
+
+<div
+  class="border-red-900 border-2 p-3 mb-4 cursor-pointer bg-slate-950 hover:bg-linear-to-t from-red-900"
+>
+  <a
+    href={disabled ? undefined : href}
+    target="_blank"
+    class="flex w-54 h-max justify-center items-center gap-3 text-gray-300 text-4xl font-bold font-fsex"
+  >
+    <slot />
+    <span>{linkName}</span>
+  </a>
+  {
+    disabled && (
+      <p
+        class="mt-1 text-yellow-600 font-semibold text-sm flex justify-center bg-black
+      "
+      >
+        Website under construction
+      </p>
+    )
+  }
+</div>

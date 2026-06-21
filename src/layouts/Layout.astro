@@ -11,11 +11,11 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <title>{title} · {description}</title>
   </head>
-  <body class="bg-black pt-14 text-white selection:bg-red-950">
+  <body
+    class="bg-black pt-14 text-white font-gohu selection:bg-red-950 selection:text-white"
+  >
     <main class="flex flex-col justify-items-center items-center">
-      <h1
-        class="text-9xl text-red-700 selection:text-white font-bold font-fsex mb-10 mr-2.5"
-      >
+      <h1 class="text-7xl text-red-700 font-bold mb-10">
         {title}
       </h1>
       <slot />

@@ -1,28 +1,12 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: FixedsysExcelsior;
-    font-style: normal;
-    font-weight: 400;
-    src: url(../../public/fonts/fsex300-webfont.woff);
+    font-family: Gohu;
+    font-display: swap;
+    src: url("../assets/fonts/gohu-font.woff");
 }
 
 @theme {
-  --font-fsex: 'FixedsysExcelsior', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
-/* Animación del cursor */
-@keyframes blink {
-  0%, 49% {
-    opacity: 1;
-  }
-  50%, 100% {
-    opacity: 0;
-  }
-}
-
-.cursor {
-  display: inline-block; /* Para que el opacity funcione bien */
-  animation: blink 1.2s infinite;
-  font-weight: bold;      /* Opcional: resalta el cursor */
+  
+  --font-gohu: 'Gohu', monospace;
 }

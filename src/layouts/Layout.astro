@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import fontUrl from "../assets/fonts/gohu-font.woff";
 const { title, description } = Astro.props;
 ---
 
@@ -9,10 +10,11 @@ const { title, description } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="preload" href={fontUrl} as="font" type="font/woff" crossorigin />
     <title>{title} · {description}</title>
   </head>
   <body
-    class="bg-black pt-14 text-white font-gohu selection:bg-red-950 selection:text-white"
+    class="bg-black text-white font-gohu selection:bg-red-950 selection:text-white w-full min-h-screen flex flex-col justify-center items-center"
   >
     <main class="flex flex-col justify-items-center items-center">
       <h1 class="text-7xl text-red-700 font-bold mb-10">
